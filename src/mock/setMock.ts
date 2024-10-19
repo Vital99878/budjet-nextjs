@@ -1,9 +1,9 @@
 import MockAdapter from "axios-mock-adapter";
 
-type Config = {
+type Config<TResponse = unknown> = {
   url: string;
   method: "onGet" | "onDelete" | "onPost" | "onPut" | "onPatch";
-  response: any;
+  response: TResponse;
   /*   Отключить мок*/
   passThrough: boolean;
   adapter: MockAdapter;
