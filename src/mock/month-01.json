@@ -1,0 +1,73 @@
+[
+  {
+    "groceries": 250,
+    "entertainment": {
+      "amount": 70,
+      "including": {
+        "movies": 40,
+        "concerts": 30
+      }
+    },
+    "transportation": 45
+  },
+  {
+    "groceries": 150,
+    "entertainment": {
+      "amount": 50,
+      "including": {
+        "games": 20,
+        "theater": 30
+      }
+    },
+    "transportation": {
+      "amount": 75,
+      "including": {
+        "bus": 40,
+        "train": 35
+      }
+    }
+  },
+  {
+    "groceries": 100,
+    "entertainment": {
+      "amount": 60,
+      "including": {
+        "dining": 40,
+        "movies": 20
+      }
+    },
+    "transportation": {
+      "amount": 50,
+      "including": {
+        "taxi": 50
+      }
+    }
+  },
+  {
+    "groceries": 200,
+    "transportation": 30,
+    "entertainment": {
+      "amount": 80,
+      "including": {
+        "concerts": 50,
+        "theater": 30
+      }
+    }
+  },
+  {
+    "groceries": 300,
+    "transportation": {
+      "amount": 60,
+      "including": {
+        "uber": 60
+      }
+    },
+    "entertainment": {
+      "amount": 100,
+      "including": {
+        "movies": 50,
+        "games": 50
+      }
+    }
+  }
+]
