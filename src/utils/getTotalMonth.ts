@@ -1,7 +1,7 @@
-import {MonthExpensesData, IncludingExpenses} from "@/types/expenses";
+import {MonthExpensesData, CompositeExpense} from "@/types/expenses";
 
-export default function getTotalMonth(data: MonthExpensesData): Record<string, number | IncludingExpenses> {
-  const total: Record<string, number | IncludingExpenses> = {};
+export default function getTotalMonth(data: MonthExpensesData): Record<string, number | CompositeExpense> {
+  const total: Record<string, number | CompositeExpense> = {};
 
   data.forEach(dayExpenses => {
     for (const key in dayExpenses) {
@@ -9,7 +9,7 @@ export default function getTotalMonth(data: MonthExpensesData): Record<string, n
 
       if (typeof value === 'number') {
         // Если значение является числом, добавляем к общему итогу
-        // @ts-ignore
+        // @ts-expect-error
         total[key] = (total[key] || 0) + value;
       } else if (typeof value === 'object' && value !== null) {
         // Если значение является объектом IncludingExpenses
@@ -17,9 +17,9 @@ export default function getTotalMonth(data: MonthExpensesData): Record<string, n
           total[key] = {
             amount: 0,
             including: {}
-          } as IncludingExpenses;
+          } as CompositeExpense;
         }
-        const currentExpense = total[key] as IncludingExpenses;
+        const currentExpense = total[key] as CompositeExpense;
 
         currentExpense.amount += value.amount;
 
