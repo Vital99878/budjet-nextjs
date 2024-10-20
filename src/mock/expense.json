@@ -1,10 +1,10 @@
 {
-  "groceries": 250,
+  "groceries": 25000,
   "entertainment": {
-    "amount": 70,
+    "amount": 80000,
     "including": {
-      "movies": 40,
-      "concerts": 30
+      "movies": 15000,
+      "concerts": 5000
     }
   },
   "transportation": 45
