@@ -1,0 +1,65 @@
+/* styles/Menu.module.css */
+
+.menu {
+  position: fixed; /* Фиксируем меню */
+  top: 4rem;
+  left: -250px; /* Скрываем меню за пределами экрана */
+  width: 250px; /* Ширина меню */
+  height: 50%; /* Высота на весь экран */
+  background-color: #333; /* Цвет фона меню */
+  color: white; /* Цвет текста */
+  transition: left 0.3s ease; /* Плавный переход при показе/скрытии */
+  z-index: 1000; /* Обеспечиваем, что меню поверх других элементов */
+}
+
+.open {
+  left: 0; /* Положение при открытом состоянии */
+}
+
+.closed {
+  left: -250px; /* Положение при закрытом состоянии */
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.menuList {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.menuList li {
+  padding: 10px 20px;
+}
+
+.menuList li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.menuList li a:hover {
+  background-color: #575757; /* Цвет фона при наведении */
+}
+
+/* Медиа-запрос для больших экранов */
+@media (min-width: 1024px) {
+  .menu {
+    left: 0; /* Меню всегда открыто на больших экранах */
+  }
+  .open {
+    left: 0; /* Держим открытым при большом экране */
+  }
+  .closed {
+    left: 0; /* Также оставляем видимым при закрытом состоянии */
+  }
+  .closeButton {
+    display: none; /* Скрываем кнопку закрытия на больших экранах */
+  }
+}

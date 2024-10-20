@@ -16,7 +16,9 @@
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18",
-    "react-intl": "^6.8.0"
+    "react-intl": "^6.8.0",
+    "rxjs": "^7.8.1",
+    "sass": "^1.80.3"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
